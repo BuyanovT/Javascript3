@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Создай функциональные выражения (function expression), которое принимает два параметра, в которых ожидаются имя и возраст пользователя, возвращает сообщение в консоль, если пользователю меньше 18 лет, то: `${name}, вы еще очень молоды!`, если от 18 до 50 лет включительно, то: `${name}, добро пожаловать в личный кабинет!`, если  старше 50 лет: `${name}, моё почтение!`, в противном случае, если невозможно определить возраст по полученному значению, вернуть сообщение: "Укажите корректные данные!" .</h1>
+<script>
+let check = function(n, a) { 
+    if (typeof a !== 'number' || isNaN(a)) {
+        return "Укажите корректные данные!";
+    }
+
+    if (a < 18) {
+        return `${n}, вы еще очень молоды!`;
+    } else if (a <= 50) {
+        return `${n}, добро пожаловать в личный кабинет!`;
+    } else {
+        return `${n}, моё почтение!`;
+    }
+};
+
+let name = prompt("Как вас зовут?");
+let age = parseFloat(prompt("Сколько вам лет?"));
+console.log(check(name, age));
+</script>
+</body>
+</html>

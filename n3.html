@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Написать функции поиска минимума и максимума из трех чисел. Числа передаются в функции как параметры, возвращается соответственно минимальное и максимальное значения.</h1>
+
+    <script>
+        function findMin(a, b, c) {
+            return Math.min(a, b, c);
+        }
+        
+        function findMax(a, b, c) {
+            return Math.max(a, b, c);
+        }
+        
+        function validateInput() {
+            let num1, num2, num3;
+            do {
+                num1 = parseInt(prompt("Введите первое число:"));
+                num2 = parseInt(prompt("Введите второе число:"));
+                num3 = parseInt(prompt("Введите третье число:"));
+                
+                if (isNaN(num1) || isNaN(num2) || isNaN(num3)) {
+                    alert("Пожалуйста, введите корректные числа!");
+                }
+            } while (isNaN(num1) || isNaN(num2) || isNaN(num3));
+            
+            return { num1, num2, num3 };
+        }
+        
+        let { num1, num2, num3 } = validateInput();
+        
+        console.log("Минимум: " + findMin(num1, num2, num3));
+        console.log("Максимум: " + findMax(num1, num2, num3));
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+    </head>
+    <body>
+      <h1>Напишите математический тренажер. Числа для операций генерируется случайным образом в стрелочной функции. Вывод примера и запрос результата организуйте с помощью окна Prompt. При загрузке страницы должно открываться окно со случайно сгенерированным примером на сложение и запрос ответа. Проверьте ответ пользователя на правильность.</h1>
+    <script>let rand = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
+
+      let prob = () => {
+        let a = rand(1, 100);
+        let b = rand(1, 100);
+        return { p: `${a} + ${b}`, a: a + b };
+      };
+      
+      let train = () => {
+        let { p, a } = prob();
+        let ans = prompt(`Сколько будет ${p}?`);
+        if (ans === null) return console.log("Тренировка завершена");
+        let n = parseInt(ans, 10);
+        console.log(n === a ? `Правильно! Ответ: ${a}` : `Подумай хорошенько. Правильный ответ: ${a}`);
+      };
+      
+      train();
+      </script>
+    </body>
+</html>

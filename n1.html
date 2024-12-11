@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Написать функцию, которая принимает пол человека ('М','Ж') в виде строки, результат функции возвращает строку "Ваш пол мужской" (или женский) или же "Ваш пол не определён"</h1>
+<script>
+  function getGen(gend) {
+      if (gend == 'М' || gend=="м") return "мужской";
+      if (gend.toUpperCase() == 'Ж') return "женский";
+       else return "Ваш пол не определен";
+      }
+      let g=prompt();
+      alert(getGen(g));
+  </script>
+</body>
+</html>

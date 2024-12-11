@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Создай функциональные выражения (function expression), которое принимает один параметр, проверяет и выводит в консоль его тип данных.</h1>
+<script>
+  let getType = function(x) 
+  { 
+    return typeof x;
+  };
+
+console.log(getType(4));
+console.log(getType("abc"));
+console.log(getType(true));
+console.log(getType(null));
+console.log(getType(undefined));
+console.log(getType({}));
+console.log(getType([]));
+console.log(getType(function(){}));
+</script>
+</body>
+</html>
